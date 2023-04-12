@@ -21,7 +21,7 @@ spring:
         - id: msserie
           uri: lb://api-serie
           predicates:
-            - Path=/serie/**
+            - Path=/api/v1/series/**
 
 info:
   app:
@@ -33,6 +33,7 @@ eureka:
     fetchRegistry: true
     serviceURL:
       defaultZone: http://localhost:8761/eureka
+
 management:
   endpoint:
     gateway:

@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: api-movie
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+  zipkin:
+    baseUrl: http://localhost:9411/
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/espbackend
     username: root
@@ -11,6 +18,7 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+
 
 info:
   application:

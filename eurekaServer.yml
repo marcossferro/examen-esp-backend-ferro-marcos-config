@@ -3,12 +3,13 @@ server:
 
 spring:
   application:
-    name: ms-discovery
+    name: eureka-server
 eureka:
   instance:
     hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:8761/eureka
