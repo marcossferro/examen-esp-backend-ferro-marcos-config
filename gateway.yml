@@ -13,7 +13,7 @@ spring:
         - id: msmovie
           uri: lb://api-movie
           predicates:
-            - Path=/api/v1/movies/save
+            - Path=/api/v1/movies/**
         - id: mscatalog
           uri: lb://api-catalog
           predicates:
